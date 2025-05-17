@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片爬取工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>网站图片爬取工具</h1>
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="请输入网站URL">
+            <button id="fetchBtn">获取图片</button>
+            <button id="downloadAllBtn" class="hidden">一键下载</button>
+            <button id="getLinksBtn" class="hidden">获取所有下载链接</button>
+        </div>
+        <div id="resultContainer">
+            <div id="loading" class="hidden">正在爬取图片，请稍候...</div>
+            <div id="certWarning" class="hidden">
+                <p>首次使用请访问 <a href="https://192.168.10.108:8443" target="_blank">https://192.168.10.108:8443</a> 并信任证书</p>
+            </div>
+            <div id="stats" class="hidden">已找到 <span id="imageCount">0</span> 张图片</div>
+            <div id="imageResults"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
